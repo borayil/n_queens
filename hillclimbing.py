@@ -59,12 +59,12 @@ def hill_climbing(board):
     # If optimum was reached, print solution...
     print("Final State")
     if evaluate_state(board) == optimum:
-        print("Solved!")
         print_board(board) 
+        print("Solved!")
         print("---  Time: %s sec ---" % (time.time() - start_time))
         return
     else:
         print_board(board)
-        print("Found local maximum")
+        print("Could not find optimal solution.")
         print("Points away from optimum: ", optimum - evaluate_state(board))
     print("---  Time: %s sec ---" % (time.time() - start_time))
